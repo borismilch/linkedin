@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     <Auth0Provider
       domain='dev-ly2qm2-a.us.auth0.com'
       clientId='JbCnnNlpbtSmfMqOpWWuMk5q9DSH0b4a'
-      redirectUri={'http://localhost:3000/'}
+      redirectUri={process.env.CLIENT_URL}
       
     >
 
