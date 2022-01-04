@@ -11,9 +11,11 @@ async function main() {
     },
   });
 
-  await prisma.link.createMany({
-    data: links,
-  });
+  links.forEach( async link => {
+    await prisma.link.create({
+      data: link
+    })
+  })
 }
 
 main()
