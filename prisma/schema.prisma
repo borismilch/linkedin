@@ -14,18 +14,5 @@ model User {
   email     String?  @unique
   image     String?
   role      String
-  bookmarks Link[]
 }
 
-
-model Link {
-  id          String   @id @default(uuid())
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  title       String
-  description String
-  url         String
-  imageUrl    String
-  category    String
-  users       User[]
-}

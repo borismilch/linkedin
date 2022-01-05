@@ -1,5 +1,4 @@
 import { PrismaClient } from '@prisma/client';
-import { links } from '../data/links';
 
 const prisma = new PrismaClient();
 
@@ -11,11 +10,7 @@ async function main() {
     },
   });
 
-  links.forEach( async link => {
-    await prisma.link.create({
-      data: link
-    })
-  })
+  
 }
 
 main()

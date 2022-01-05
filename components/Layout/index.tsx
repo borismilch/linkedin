@@ -1,11 +1,21 @@
+import Head from "next/head";
 import React from "react";
 import Header from "./Header";
 
-const Layout = ({ children }) => {
+import Footer from './Footer'
+
+const Layout: React.FC<{title: string}> = ({ children, title }) => {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col ">
+      <Head>
+        <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Header />
       {children}
+      
+      <Footer/>
     </div>
   );
 };
