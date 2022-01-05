@@ -21,4 +21,10 @@
   .tab_style {
     @apply flex gap-1 border-b-2 pb-3 border-transparent transition-all hover:border-blue-400 duration-200 hover:text-blue-400 cursor-pointer items-center
   }
+  body {
+    @apply overflow-x-hidden
+  }
+  .pagination_button {
+    @apply flex mx-auto flex-col items-center transition-all duration-200 hover:text-blue-500 cursor-pointer
+  }
 }
