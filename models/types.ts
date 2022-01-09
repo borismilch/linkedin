@@ -5,9 +5,3 @@ export interface IUser {
   createdAt: Date 
   lastVisit?: Date 
 }
-
-export interface ITabItem {
-  val: string 
-  Icon: any 
-  title: string
-}
