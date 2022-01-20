@@ -1,35 +1,8 @@
-import { gql } from 'apollo-server-micro'
+import { userChema } from "./shema/userChema";
+import { PostChema } from './shema/postChema'
+import { LikeChema } from './shema/likeChema'
+import { CommentSchema } from './shema/CommentChema'
 
-export const typeDefs = gql `
+import { resumeShema } from "./shema/resumeChema";
 
-  type Link {
-    id: String 
-    title:  String 
-    description: String 
-    url: String 
-    category: String 
-    imageUrl: String 
-    users: [String] 
-
-  }
-
-  type Query {
-    links: [Link]
-  }
-
-  type Edge {
-    cursor: String 
-    node: Link
-  }
-
-  type  PageInfo {
-    endCursor: String 
-    hasNextPage: Boolean
-  }
-
-  type Response {
-    pageInfo: PageInfo
-    edges: [Edge]
-  }
-
-`
+export const typeDefs = [userChema, PostChema, LikeChema, CommentSchema, resumeShema]

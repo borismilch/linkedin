@@ -1,32 +1,22 @@
 import '../styles/index.css';
 
-import { ApolloProvider } from '@apollo/client';
-import apolloClient from '../lib/apollo';
+import apolloClient from '@/lib/apollo'
 
-import { Auth0Provider } from '@auth0/auth0-react'
+import { ApolloProvider } from '@apollo/client';
+import {UserProvider}  from '@auth0/nextjs-auth0'
 
 function MyApp({ Component, pageProps }) {
   return (
 
-    <Auth0Provider
-      domain='dev-ly2qm2-a.us.auth0.com'
-      clientId='...'
-      redirectUri={process.env.CLIENT_URL}
-      
-    >
-
     <ApolloProvider client={apolloClient}>
+      
+      <UserProvider>
 
-  
-     <Component {...pageProps} />
-    
+      <Component {...pageProps} />
+
+      </UserProvider>
 
     </ApolloProvider>
-
-
-   </Auth0Provider>
-
-  
 
   );
 }

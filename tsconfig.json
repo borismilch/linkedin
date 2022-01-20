@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    
     "target": "es5",
     "lib": [
       "dom",
@@ -16,7 +17,21 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/gql/*": ["graphql/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/models/*": ["models/*"],
+      "@/lib/*": ["lib/*"],
+      "@/prisma/*": ["prisma/*"],
+      "@/store/*": ["store/*"],
+      "@/utils/*": ["utils/*"],
+      "@/pages/*": ["pages/*"],
+      "@/containers/*":  ["container/*"],
+    }
   },
   "include": [
     "next-env.d.ts",

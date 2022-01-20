@@ -4,27 +4,112 @@
 
 
 @layer components {
-  .header_link {
-    @apply transition-all duration-200  font-semibold p-2 text-sm text-gray-700 rounded-md hover:text-blue-500 cursor-pointer active:scale-95
+
+  .element {
+    @apply flex flex-col flex-grow bg-white drop-shadow-md p-8 pr-4 rounded-xl
   }
+
+  .inputForm {
+    @apply border-gray-700 my-5 border-2 rounded-md p-1 placeholder-gray-400 focus:border-gray-700 focus:ring-0
+  }
+
+  .wide_input {
+    @apply rounded-full border-gray-500 w-full p-3 focus:ring-0 focus:border-gray-700 cursor-pointer
+  }
+
+  .small-pic {
+    @apply relative avatar w-full max-w-[48px] drop-shadow-lg rounded-lg overflow-hidden brightness-75 hover:brightness-95 cursor-pointer transition-all duration-200
+  }
+
+  .ico {
+    @apply flex gap-2 items-center p-2 px-4 transition-all duration-200 hover:bg-gray-100 cursor-pointer active:bg-gray-200
+  }
+
+  .link {
+    @apply text-blue-500 p-2 px-3 hover:bg-blue-50  transition-all duration-200 hover:text-blue-600 cursor-pointer
+  }
+
+  .small_icon {
+    @apply transition-all duration-200 cursor-pointer rounded-full p-2 hover:bg-gray-100 text-gray-600 hover:text-gray-800
+  }
+
+  .small_icon_blue {
+    @apply small_icon hover:bg-blue-100 text-blue-600 hover:text-blue-600
+  }
+
+  .app_container {
+    @apply mx-auto flex w-full md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1128px]
+  }
+ 
+  .avatar-xs {
+    @apply w-[24px] h-[24px] rounded-full object-cover relative overflow-hidden
+  }
+
   .avatar {
-    @apply w-[34px] h-[34px] rounded-full object-cover
-  }
-  .serch_input_button {
-    @apply bg-gray-100 border active:scale-90 p-2 rounded-md hover:shadow-md hover:bg-gray-200 transition-all duration-200 cursor-pointer
+    @apply w-[42px] flex-shrink-0 h-[42px] rounded-full object-cover relative overflow-hidden
   }
 
-  .header_icon {
-    @apply h-5 w-5  transition-all text-gray-500 duration-200 cursor-pointer hover:text-blue-500 hover:scale-110
+  .avatar-lg {
+    @apply w-[68px] h-[68px] rounded-full object-cover relative overflow-hidden
   }
 
-  .tab_style {
-    @apply flex gap-1 border-b-2 pb-3 border-transparent transition-all hover:border-blue-400 duration-200 hover:text-blue-400 cursor-pointer items-center
+  .avatar-xl {
+    @apply w-[104px] h-[104px] rounded-full object-cover relative overflow-hidden
   }
+
+  .avatar-xxl {
+    @apply  w-[152px] h-[152px] rounded-full object-cover relative overflow-hidden
+  }
+
+  .banner_button {
+    @apply rounded-full border-gray-400 px-3 py-1 border font-medium transition-all duration-200 cursor-pointer active:scale-90
+  }
+
+  .banner_button-blue {
+    @apply banner_button border-none bg-blue-500 text-white border-blue-800
+     hover:bg-blue-600 
+  }
+
+  .banner_button-blue_outline {
+    @apply banner_button border-blue-400
+   hover:bg-blue-100 text-blue-600 hover:border-blue-500
+  }
+
+  .modalFooter {
+    @apply absolute bottom-0 w-full justify-end flex items-center gap-2 pr-6 left-0 p-3 border-gray-300 border-t
+  }
+
+
   body {
-    @apply overflow-x-hidden
+    @apply overflow-x-hidden bg-[#f3f2ef]
   }
-  .pagination_button {
-    @apply flex mx-auto flex-col items-center transition-all duration-200 hover:text-blue-500 cursor-pointer
+  .overlay {
+    @apply inset-0 absolute bg-black bg-opacity-60
+  }
+
+  .header_tab {
+    @apply flex flex-col border-b-[3px] py-1 border-transparent transition-all hover:text-gray-800 cursor-pointer duration-200 hover:bg-gray-100  w-[90px] items-center justify-center text-gray-600
+  }
+
+  .header_tab_active {
+    @apply border-gray-800 bg-gray-200 text-gray-800 hover:bg-gray-200
+  }
+
+  .outline_button {
+    @apply border-2 border-blue-500 text-blue-800 font-medium rounded-full cursor-pointer active:scale-90 transition-all duration-200 hover:bg-blue-50 mx-3 mb-2
+  }
+
+  .hoverable_overlay {
+    @apply flex opacity-0 group-hover:opacity-100 transition-all duration-200 cursor-pointer inset-0 absolute z-50 items-center justify-center bg-black bg-opacity-50
+  }
+
+  .circle_button {
+    @apply bg-white h-10 absolute rounded-full drop-shadow-md active:scale-90  w-10 border-gray-300 right-3 top-3 transition-all duration-200 cursor-pointer hover:bg-gray-100 p-2 flex items-center  justify-center
+    disabled:opacity-60 disabled:cursor-not-allowed disabled:animate-pulse
+  }
+
+
+  .resumeListItem {
+    @apply flex justify-between items-center p-3 px-5 transition-all duration-200  hover:bg-gray-50 border-b border-gray-300 cursor-pointer
   }
 }

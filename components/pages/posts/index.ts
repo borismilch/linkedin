@@ -1,0 +1,6 @@
+export { default as PostForm } from './postForm/PostForm'
+export { default as PostFormAction } from './postForm/PostFormAction'
+export { default as PostList } from './post/postList'
+export { default as Post } from './post/Post'
+export { default as PostHeader } from './post/PostHeader'
+export { default as PostFooter } from './post/postFooter'

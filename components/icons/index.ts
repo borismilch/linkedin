@@ -1,0 +1,6 @@
+export { default as Logo } from './Logo'
+export { default as WhatIcon } from './WhatIcon'
+export { default as LongLogo } from './LogoLong'
+export { default as SmallLoader } from './SmallLoader'
+export { default as AppIcon } from './AppIcon'
+export { default as LikeIcon } from './LikeIcon'
